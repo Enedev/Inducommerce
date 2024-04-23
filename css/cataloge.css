@@ -84,16 +84,47 @@ main {
 }
 
 .user-comment {
-    margin-bottom: 10px;
+    margin-top: 10px; /* Añadir un poco de espacio entre los comentarios */
+    border: 2px solid #ff0000; /* Borde rojo */
+    border-radius: 20px;
+    padding: 10px; /* Añadir un poco de espacio alrededor */
+    transition: border-color 0.5s ease; /* Transición suave para el borde */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nuevo comentario borde momentario */
+.new-comment {
+    border: 2px solid green; /* Borde rojo */
+    padding: 10px; /* Añadir un poco de espacio alrededor */
+    transition: border-color 0.5s ease; /* Transición suave para el borde */
 }
 
 .user {
     font-weight: bold;
+    align-self: flex-start;
 }
 
 .comment {
     display: block;
+    align-self: flex-start;
     margin-left: 20px;
     font-size: 1.1em; /* Tamaño de fuente más grande */
 }
+
+.add-comment {
+    margin-top: 10px;
+    background-color: white; /* Fondo blanco */
+    border: 2px solid red; /* Borde transparente */
+    border-radius: 10px; /* Borde redondeado */
+    padding: 8px 16px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    transition: background-color 0.3s, border-color 0.3s; /* Transiciones suaves */
+}
+
+.add-comment:hover {
+    background-color: #d0d0d0; /* Fondo gris claro al pasar el mouse */
+    border-color: green; /* Borde rojo al pasar el mouse */
+}
+
 
