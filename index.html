@@ -1,11 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inducommerce</title>
+    <link rel="stylesheet" type="text/css" href="css/navbar.css">
+    <link rel="icon" href="img/inducommerceIcon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    
+    <nav>
+        <a href="index.html">
+            <img id="navbar-image" src="img/Logo.png">
+          </a>
+        <a href="cataloge.html">
+            <div id="productos">Productos</div>
+          </a>
+        <div id="search">
+            <input id="search-input" type="text" placeholder=" BÚSQUEDA">
+        </div>
+        <div id="contact">Contacto</div>
+        <a href="shoppingCart.html">
+            <img id="cart" src="imgs/LOHICE.png">
+          </a>
+    </nav>
+    <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel">
+          <li class="card">
+            <div class="img"><img src="img/kitchen1.jpeg" alt="img" draggable="false"></div>
+            <h2>Cocina 1</h2>
+            <span>Servicio</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="img/kitchen2.jpeg" alt="img" draggable="false"></div>
+            <h2>Tuberias</h2>
+            <span>Servicios de instalacion</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="img/kitchen3.jpeg" alt="img" draggable="false"></div>
+            <h2>Estufa</h2>
+            <span>Servicios de instalacion</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="img/kitchen3.jpeg" alt="img" draggable="false"></div>
+            <h2>Estufa 2</h2>
+            <span>Servicios de instalacion</span>
+          </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+    </div>
+    <a href="aboutUs.html" class="read-more-btn">CONOCER MÁS</a>
+    <script src="js/carrusel.js"></script>
 </body>
 </html>
