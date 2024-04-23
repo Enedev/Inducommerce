@@ -1,0 +1,29 @@
+nav {
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: red;
+}
+
+#navbar-image {
+    width: 45px;  /* Cambia esto al ancho que desees */
+    height: 45px; /* Cambia esto al alto que desees */
+    margin: -10px 0px;
+}
+
+#menu, #contact, #cart {
+    color: white;
+}
+
+#search input {
+    width: 300px;
+    height: 25px;
+    margin-left: 10px;
+    margin: -10px 0px;
+    border-radius: 15px; /* Ajusta este valor para cambiar el redondeo de las esquinas */
+}
+
+#search input {
+    margin-left: 10px;
+}

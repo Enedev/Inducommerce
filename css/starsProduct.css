@@ -1,0 +1,19 @@
+/* Estilos para las estrellas */
+.stars {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.star {
+    font-size: 30px;
+    color: black; /* Color de estrellas apagadas */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Transición de color al pasar el mouse */
+}
+
+.star:hover,
+.star.active {
+    color: gold; /* Color de estrellas encendidas */
+}

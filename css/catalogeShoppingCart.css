@@ -1,0 +1,16 @@
+/* Agrega estilos para el botón de agregar al carrito */
+.add-to-cart {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Transición de color al presionar */
+}
+
+.add-to-cart:hover {
+    color: red; /* Cambia el color al pasar el mouse */
+}
+
+.add-to-cart:active {
+    color: green; /* Cambia el color al presionar */
+}

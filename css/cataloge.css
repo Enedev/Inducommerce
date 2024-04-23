@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Color de fondo del cuerpo */
+}
+
+.title {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.title h2 {
+    font-size: 2em;
+    margin: 0;
+    padding: 10px 0;
+    color: #666; /* Color de texto más gris */
+    text-transform: uppercase;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    position: relative; /* Para posicionar la información adicional */
+    cursor: pointer; /* Cambiar el cursor al puntero al hacer clic */
+    background-color: #e0e0e0; /* Fondo de los productos más gris */
+}
+
+.product:hover {
+    background-color: #d0d0d0; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.product img {
+    width: 100%; /* Ajustar el ancho de la imagen al 100% del contenedor */
+    height: auto;
+    border: 2px solid red; /* Agregar un borde resaltado */
+    border-radius: 5px;
+}
+
+.product h2 {
+    margin-top: 10px;
+    font-size: 1.5em; /* Tamaño de fuente más grande */
+}
+
+.product p {
+    margin: 10px 0;
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+}
+
+.more-info {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Posicionar la información adicional a la derecha */
+    transform: translateX(10px); /* Desplazar ligeramente la información adicional */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que esté encima de los demás elementos */
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    width: 400px; /* Ancho de la información adicional */
+    overflow: auto; /* Habilitar el desplazamiento si el contenido es demasiado grande */
+}
+
+.product.active .more-info {
+    display: block;
+}
+
+.comments {
+    margin-top: 20px;
+}
+
+.user-comment {
+    margin-bottom: 10px;
+}
+
+.user {
+    font-weight: bold;
+}
+
+.comment {
+    display: block;
+    margin-left: 20px;
+    font-size: 1.1em; /* Tamaño de fuente más grande */
+}
+
