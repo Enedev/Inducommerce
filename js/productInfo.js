@@ -15,3 +15,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Agregar controladores de eventos a los botones de "Añadir al carrito"
+let addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+addToCartButtons.forEach(function(addButton) {
+    addButton.addEventListener('click', function() {
+        // Agregar una clase "added-to-cart" al botón al hacer clic
+        this.classList.add('added-to-cart');
+
+        // Aquí puedes agregar el resto del código relacionado con agregar el producto al carrito
+    });
+});

@@ -111,9 +111,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
         
-        
-
-        
     } else {
         // Mostrar un mensaje indicando que el carrito está vacío
         let cartContainer = document.getElementById("cart-items");
@@ -131,3 +128,4 @@ function updateTotal(){
         // Actualizar el contenido del elemento HTML que muestra el total de la compra
     document.getElementById('total-price').textContent = totalPrice.toFixed(2);
 }
+

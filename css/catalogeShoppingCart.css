@@ -1,16 +1,22 @@
-/* Agrega estilos para el botón de agregar al carrito */
 .add-to-cart {
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    transition: color 0.3s ease; /* Transición de color al presionar */
+    background-color: white; /* Fondo blanco */
+    border: 2px solid red; /* Borde rojo */
+    color: red; /* Color de texto rojo */
+    border-radius: 10px; /* Borde redondeado */
+    padding: 8px 16px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Transiciones suaves */
 }
 
 .add-to-cart:hover {
-    color: red; /* Cambia el color al pasar el mouse */
+    background-color: #d0d0d0; /* Fondo gris claro al pasar el mouse */
+    border-color: green; /* Borde rojo al pasar el mouse */
+    color: green; /* Color de texto verde al pasar el mouse */
 }
 
-.add-to-cart:active {
-    color: green; /* Cambia el color al presionar */
+.add-to-cart.added-to-cart {
+    background-color: green; /* Cambiar el fondo a verde */
+    border-color: green; /* Cambiar el borde a verde */
+    color: white; /* Cambiar el color de texto a blanco */
+    pointer-events: none; /* Deshabilitar clics posteriores */
 }
