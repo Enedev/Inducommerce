@@ -16,13 +16,9 @@ nav {
 }
 
 #navbar-image {
-    width: 45px;  /* Cambia esto al ancho que desees */
-    height: 45px; /* Cambia esto al alto que desees */
-    margin: -10px 0px;
-}
-
-#menu, #contact, #cart {
-    color: white;
+    width: 50px;  /* Cambia esto al ancho que desees */
+    height: 50px; /* Cambia esto al alto que desees */
+    margin: -7px 0px;
 }
 
 #search{
@@ -55,10 +51,11 @@ nav {
 #productos,
 #contact {
     text-decoration: none; /* Quita el subrayado predeterminado */
-    color: black; /* Cambia el color del texto si lo deseas */
+    color: white; /* Cambia el color del texto si lo deseas */
     position: relative; /* Añade posición relativa para que la línea esté posicionada correctamente */
     height: 30px;
     transition: color 0.3s; /* Añade una transición para el cambio de color del texto */
+    margin: 5px 0px;
 }
 
 #productos:hover::after,
@@ -75,4 +72,9 @@ nav {
 
 #cart_icon{
     font-size: 30px;
+    color: white;
+}
+
+a {
+    text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
 }
