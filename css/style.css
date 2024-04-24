@@ -84,7 +84,7 @@ body {
   border-radius: 8px;
 }
 .carousel .card .img {
-  background: #8B53FF;
+  background: red;
   height: 148px;
   width: 148px;
   border-radius: 50%;
