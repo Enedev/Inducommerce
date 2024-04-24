@@ -123,6 +123,13 @@ document.addEventListener("DOMContentLoaded", function() {
         cartContainer.innerHTML = "<p>El carrito está vacío.</p>";
        
     }
+    document.getElementById('buy-button').addEventListener('click', function() {
+        // Eliminar los divs de los productos
+        document.getElementById('cart-items').innerHTML = "<p>Compra exitosa</p>";
+    
+        // Vaciar el carrito en el almacenamiento local asignando un array vacío
+        localStorage.setItem('cart', JSON.stringify([]));
+    });
 });
 
 
