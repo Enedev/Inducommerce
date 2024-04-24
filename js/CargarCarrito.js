@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("esto es cart: ", cart)
     // Verificar si hay productos en el carrito
     if (cart && cart.length > 0) {
+        
         // Obtener el contenedor del carrito
         let cartContainer = document.getElementById("cart-items");
 
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
                               "</div>";
             cartContainer.innerHTML += productHTML;
         });
-
+        displayBuyButton()
         updateTotal()
         // Agregar controladores de eventos a los botones de más y menos
         let addButtonList = document.querySelectorAll('.add-button');
@@ -82,6 +83,11 @@ document.addEventListener("DOMContentLoaded", function() {
                         localStorage.setItem("cart", JSON.stringify(cart));
                         // Eliminar el elemento del DOM
                         this.parentNode.remove();
+                        
+                        if (cart.length === 0){
+                            hidebuybutton()
+                        }
+
                     } else {
                         // Decrementar el número de unidades si no es 1
                         unit--;
@@ -115,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Mostrar un mensaje indicando que el carrito está vacío
         let cartContainer = document.getElementById("cart-items");
         cartContainer.innerHTML = "<p>El carrito está vacío.</p>";
+       
     }
 });
 
@@ -127,5 +134,15 @@ function updateTotal(){
         });
         // Actualizar el contenido del elemento HTML que muestra el total de la compra
     document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+}
+
+function displayBuyButton(){
+    document.getElementById('buy-button').style.display="block"
+
+}
+
+function hidebuybutton(){
+    document.getElementById('buy-button').style.display="none"
+
 }
 
