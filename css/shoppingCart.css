@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para el contenedor de la lista de carrito */
+#cart-items-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex; /* Usar flexbox para alinear los elementos en línea */
+    flex-direction: column; /* Colocar los elementos en columna (uno debajo de otro) */
+}
+
+/* Estilo para cada elemento de la lista del carrito */
+.cart-item {
+    display: flex; /* Usar flexbox para alinear los elementos internos */
+    justify-content: space-between; /* Distribuir el espacio entre los elementos internos */
+    margin-bottom: 10px; /* Espacio entre elementos */
+    align-items: center; /* Alinear verticalmente los elementos */
+}
+
+/* Estilo para el nombre del artículo */
+.item-name {
+    margin-right: auto; /* Empuja el nombre del artículo hacia la izquierda */
+}
+
+/* Estilo para el precio del artículo */
+.item-price {
+    margin-left: auto; /* Empuja el precio del artículo hacia la derecha */
+    padding-right: 10px;
+}
+
+
+/* Estilo para la imagen dentro de cada elemento de la lista del carrito */
+.cart-item img {
+    width: 200px;
+    margin-right: 10px; /* Espacio a la derecha de la imagen */
+}
