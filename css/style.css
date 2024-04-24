@@ -8,7 +8,6 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color: #f2f2f2; /* Color de fondo del cuerpo */
 }
 
@@ -18,7 +17,7 @@ body {
     margin-top: 100px;
     justify-content: center; /* Centra el contenido horizontalmente */
     align-items: flex-start; /* Centra el contenido verticalmente */
-    height: 60vh; /* Ajusta la altura para ocupar toda la ventana */
+    height: 50vh; /* Ajusta la altura para ocupar toda la ventana */
 }
 .wrapper i {
   top: 50%;
@@ -115,6 +114,24 @@ body {
   .wrapper .carousel {
     grid-auto-columns: 100%;
   }
+}
+
+#text {
+    text-align: center;
+}
+h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 0;
+}
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+#rojito{
+    color: red;
+
 }
 .read-more-btn {
     display: flex; /* Make it a block element */

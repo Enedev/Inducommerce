@@ -1,0 +1,37 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Servicios */
+.services {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/* Imagen de equipo de cocina */
+.equipment img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
