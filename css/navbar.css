@@ -21,6 +21,13 @@ nav {
     margin: -7px 0px;
 }
 
+#navbar-title {
+    color: white; /* Cambia el color del texto si lo deseas */
+    margin-left: 1px; /* Añade un margen a la izquierda para separar el título del logo */
+    position: relative; /* Añade posición relativa para mover el título */
+    bottom: 10px; /* Ajusta este valor para mover el título hacia arriba */
+}
+
 #search{
     position: relative;
 }
@@ -74,6 +81,7 @@ nav {
     font-size: 30px;
     color: white;
 }
+
 
 a {
     text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
