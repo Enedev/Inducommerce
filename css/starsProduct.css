@@ -15,5 +15,5 @@
 
 .star:hover,
 .star.active {
-    color: gold; /* Color de estrellas encendidas */
+    color: yellow; /* Color de estrellas encendidas */
 }

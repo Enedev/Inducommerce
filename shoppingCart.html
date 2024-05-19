@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Inducommerce</title>
+    <title>Shopping Cart</title>
     <link rel="stylesheet" type="text/css" href="css/navbar.css">
     <link rel="icon" href="img/Logo.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -9,44 +9,47 @@
     <link rel="stylesheet" href="css/shoppingCart.css">
 
 </head>
-<body>
-  <nav>
-    <a href="index.html">
-        <img id="navbar-image" src="img/Logo.png">
-        <span id="navbar-title">Inducommerce</span>
-    </a>
-    <a href="cataloge.html" id="productosA">
-        <div id="productos">Productos</div>
-    </a>
-    <div id="search">
-        <input id="search-input" type="text" placeholder="Buscar...">
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+  <body>
+    <nav>
+      <div class="menu-toggle" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+      </div>
+      <a href="index.html" id = "conteinerLogo">
+          <img id="navbar-image" src="img/Logo.png">
+      </a>
+      <div class="menu">
+          <a href="cataloge.html" class="menu-item">Productos</a>
+          <a href="aboutUs.html" class="menu-item">Contacto</a>
+          <a href="shoppingCart.html" id="cart_icon">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+      </div>
+      <div id="search">
+          <input id="search-input" type="text" placeholder="Buscar...">
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <div id="page-title"></div>
+      <div class="cart-icon">
+          <a href="shoppingCart.html" id="cart_icon">
+              <i class="fas fa-shopping-cart"></i>
+          </a>
+      </div>
+    </nav>
+    <div id="cart-items-container">
+      <!-- Aquí se mostrarán los productos del carrito -->
+      <div id="cart-items"></div>
     </div>
-    <a href="aboutUs.html">
-        <div id="contact">Nosotros</div>
-        <!-- Hay que organizar el id contact en donde dice nosotros -->
-    </a>
-    <a href="shoppingCart.html" id="cart_icon">
-      <i class="fas fa-shopping-cart"></i>
-    </a>
-  </nav>
-  <h1 id="titulo-carrito">CARRITO DE COMPRAS</h1>
-  <div id="cart-items-container">
-    <!-- Aquí se mostrarán los productos del carrito -->
-    <div id="cart-items"></div>
-  </div>
-  <!-- Contenedor del total -->
-  <div id="total-container">
-    <!-- Texto "Total: $" -->
-    <span id="total-label">Total: $</span>
-    <!-- Total -->
-    <span id="total-price">0</span>
-  </div>
-
-  <div id="buy-container">
-    <button id="buy-button">Comprar</button>
-  </div>
-  <script src="js/CargarCarrito.js"></script>
-
-</body>
+    <!-- Contenedor del total -->
+    <div id="total-container">
+      <!-- Texto "Total: $" -->
+      <span id="total-label">Total: $</span>
+      <!-- Total -->
+      <span id="total-price">0</span>
+    </div>
+    <script src="js/CargarCarrito.js"></script>
+    <script src="js/menuToggle.js"></script>
+    <footer>
+      &copy; 2024 Induck'Service. Todos los derechos reservados.
+    </footer>
+  </body>
 </html>

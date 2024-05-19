@@ -10,23 +10,29 @@
 </head>
 <body>
     <nav>
-      <a href="index.html">
-          <img id="navbar-image" src="img/Logo.png">
-          <span id="navbar-title">Inducommerce</span>
-      </a>
-      <a href="cataloge.html" id="productosA">
-          <div id="productos">Productos</div>
-      </a>
-      <div id="search">
-          <input id="search-input" type="text" placeholder="Buscar...">
-          <button><i class="fa-solid fa-magnifying-glass"></i></button>
-      </div>
-      <a href="aboutUs.html">
-          <div id="contact">Nosotros</div>
-      </a>
-      <a href="shoppingCart.html" id="cart_icon">
-        <i class="fas fa-shopping-cart"></i>
-      </a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <a href="index.html" id = "conteinerLogo">
+            <img id="navbar-image" src="img/Logo.png">
+        </a>
+        <div class="menu">
+            <a href="cataloge.html" class="menu-item">Productos</a>
+            <a href="aboutUs.html" class="menu-item">Contacto</a>
+            <a href="shoppingCart.html" id="cart_icon">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
+        <div id="search">
+            <input id="search-input" type="text" placeholder="Buscar...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div id="page-title"></div>
+        <div class="cart-icon">
+            <a href="shoppingCart.html" id="cart_icon">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
     </nav>
     <div class="wrapper">
         <i id="left" class="fa-solid fa-angle-left"></i>
@@ -59,7 +65,10 @@
         <p>Indukitchen es una empresa dedicada al servicio técnico de instalación, mantenimiento, reparación y venta de equipos en el área de la industria de alimentos. Contamos con un amplio portafolio de servicios y productos.</p>
     </div>
     <a href="aboutUs.html" class="read-more-btn">CONOCER MÁS</a>
+    <footer>
+      &copy; 2024 Induck'Service. Todos los derechos reservados.
+    </footer>
     <script src="js/carrusel.js"></script>
-    
+    <script src="js/menuToggle.js"></script>
 </body>
 </html>

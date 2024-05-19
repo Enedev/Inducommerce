@@ -12,25 +12,31 @@
     <link rel="stylesheet" href="css/commentModalInput.css">
     <link rel="icon" href="img/Logo.png" type="image/png">
 </head>
-<body>
+<body class="catalog-page">
     <nav>
-        <a href="index.html">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <a href="index.html" id = "conteinerLogo">
             <img id="navbar-image" src="img/Logo.png">
-            <span id="navbar-title">Inducommerce</span>
         </a>
-        <a href="cataloge.html" id="productosA">
-            <div id="productos">Productos</div>
-        </a>
+        <div class="menu">
+            <a href="cataloge.html" class="menu-item">Productos</a>
+            <a href="aboutUs.html" class="menu-item">Contacto</a>
+            <a href="shoppingCart.html" id="cart_icon">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
         <div id="search">
             <input id="search-input" type="text" placeholder="Buscar...">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
-        <a href="aboutUs.html">
-            <div id="contact">Nosotros</div>
-        </a>
-        <a href="shoppingCart.html" id="cart_icon">
-            <i class="fas fa-shopping-cart"></i>
-        </a>
+        <div id="page-title"></div>
+        <div class="cart-icon">
+            <a href="shoppingCart.html" id="cart_icon">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
     </nav>
     <div class="title">
         <h2>Nuestros productos</h2>
@@ -225,6 +231,9 @@
             <button id="submitComment">Aceptar</button>
         </div>
     </div>
+    <footer>
+        &copy; 2024 Induck'Service. Todos los derechos reservados.
+    </footer>
 
     <script src="js/productInfo.js"></script>
     <script src="js/productComents.js"></script>
@@ -233,5 +242,7 @@
     <script src="js/searcher.js"></script>
     <script src="js/carrito.js"></script>
     <script src="js/CargarCarrito.js"></script>
+    <script src="js/menuToggle.js"></script>
+
 </body>
 </html>

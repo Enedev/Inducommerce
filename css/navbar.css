@@ -7,82 +7,149 @@
 }
 
 nav {
+    position: relative; /* Hace que el nav esté fijo en la parte superior */
+    top: 0; /* Lo fija en la parte superior */
+    left: 0; /* Lo fija en el borde izquierdo */
+    width: 100%; /* Ocupa todo el ancho de la ventana */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    background-color: red;
     height: 80px;
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: red;
     border-radius: 5px;
 }
 
 #navbar-image {
     width: 50px;  /* Cambia esto al ancho que desees */
     height: 50px; /* Cambia esto al alto que desees */
-    margin: -7px 0px;
+    margin: -7px 0px; /* Ajusta el valor de 'margin-right' a 10px */
+    
+}
+#conteinerLogo{
+    margin-left: 40px;
 }
 
-#navbar-title {
-    color: white; /* Cambia el color del texto si lo deseas */
-    margin-left: 1px; /* Añade un margen a la izquierda para separar el título del logo */
-    position: relative; /* Añade posición relativa para mover el título */
-    bottom: 10px; /* Ajusta este valor para mover el título hacia arriba */
-}
-
-#search{
+#search {
     position: relative;
+    display: flex;
+    align-items: center;
+    display: none;
 }
+
+/* Muestra el contenedor de búsqueda solo en cataloge.html */
+.catalog-page #search {
+    display: flex;
+}
+
+
 #search input {
     padding: 10px;
-    padding-right: 35px;
-    border-radius: 5px 0 0 5px; /* Ajusta este valor para cambiar el redondeo de las esquinas */
+    border-radius: 5px 0 0 5px;
     border: 0;
     outline: none;
     font-size: 1rem;
-    cursor: pointer;
-    margin-top: 0;
+    flex: 1; /* El input ocupa todo el espacio disponible */
 }
 
-#search button{
+#search button {
     background-color: black;
-    padding: 10px;
-    border-color: red;
-    position: absolute;
+    padding: 12.5px 15px; /* Aumenta el padding horizontal */
     border-radius: 0 5px 5px 0;
     color: white;
+    border: none; /* Elimina el borde */
+    outline: none;
+    cursor: pointer;
 }
+
 
 #search button:hover{
     background-color: rgba(0 0 0 / .2);
 }
 
 #productos,
-#contact {
-    text-decoration: none; /* Quita el subrayado predeterminado */
-    color: white; /* Cambia el color del texto si lo deseas */
-    position: relative; /* Añade posición relativa para que la línea esté posicionada correctamente */
-    height: 30px;
-    transition: color 0.3s; /* Añade una transición para el cambio de color del texto */
-    margin: 5px 0px;
+#contact :hover{
+    transform: scale(1.2); /* Aumenta el tamaño del icono */
+    color: #808080; /* Cambia el color a gris */
 }
 
-#productos:hover::after,
-#contact:hover::after {
-    content: ''; /* Añade un contenido vacío para crear la línea */
-    position: absolute; /* Asegura que la línea esté posicionada correctamente */
-    left: 0; /* Ajusta la posición de la línea */
-    bottom: -2px; /* Ajusta la posición de la línea */
-    width: 100%; /* Ajusta el ancho de la línea */
-    height: 2px; /* Ajusta la altura de la línea */
-    background-color: white; /* Cambia el color de la línea */
-    transition: background-color 0.3s; /* Añade una transición para el cambio de color de la línea */
-}
-
-#cart_icon{
+/* Estilo del icono del carrito */
+/* Estilo del icono del carrito */
+#cart_icon {
     font-size: 30px;
     color: white;
+    position: relative; /* Asegura que los pseudo-elementos se posicionen correctamente */
+    transition: transform 0.8s, color 0.3s; /* Añade transición para el cambio de tamaño y color */
 }
 
+/* Estilo del icono del carrito al hacer hover */
+#cart_icon:hover {
+    transform: scale(1.2); /* Aumenta el tamaño del icono */
+    color: #808080; /* Cambia el color a gris */
+}
 
 a {
     text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
+}
+
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute; /* Añade posición absoluta */
+    left: 20px; /* Ajusta la posición a la izquierda */
+}
+
+.menu-toggle i {
+    font-size: 20px;
+    color: white;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 200px;
+    background-color: red;
+    border-radius: 5px;
+}
+
+.menu-item {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-left: 5px;
+}
+
+.menu-item:hover {
+    color:#808080;
+    transform: scale(1.1); /* Aumenta el tamaño del icono */
+}
+.menu #cart_icon {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    height: 50px; /* Ajusta la altura del contenedor */
+}
+
+.menu #cart_icon i {
+    margin: 0; /* Elimina cualquier margen que pueda afectar el centrado */
+}
+
+#page-title {
+    position: absolute;
+    right: 80px;
+}
+
+footer {
+    background-color: red; /* Color de fondo rojo */
+    color: white; /* Color del texto */
+    text-align: center; /* Alineación del texto al centro */
+    padding: 20px 0; /* Espaciado interno superior e inferior */
+    position: fixed; /* Fijar el footer en la parte inferior de la ventana */
+    width: 100%; /* Ancho completo del footer */
+    bottom: 0; /* Posición en la parte inferior */
 }
