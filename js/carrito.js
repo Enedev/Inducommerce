@@ -1,25 +1,36 @@
-function addToCart(productName, productPrice, imagePath) {
-    // Guardar información del producto en el localStorage
-    let cartItem = {
-        name: productName,
-        price: productPrice,
-        image: imagePath,
-        quantity: 1,
-        lastPrice: productPrice //para que guarde el ultimo valor que había
-    };
-
-    // Obtener el carrito actual del localStorage o inicializarlo si está vacío
+function addToCart(productName, productPrice, imagePath, stock) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // Verificar si el producto ya está en el carrito antes de agregarlo
-    if (!cart.some(item => item.name === productName)) {
-        // Agregar el nuevo item al carrito
-        cart.push(cartItem);
-
-        // Guardar el carrito actualizado en el localStorage
-        localStorage.setItem("cart", JSON.stringify(cart));
-    } else {
-        console.log('El producto ya está en el carrito.');
+    let existingItem = cart.find(item => item.name === productName);
+    if (existingItem) {
         alert('El producto ya está en el carrito.');
+        return;
+    }
+
+    if (stock <= 0) {
+        alert('El producto está fuera de stock.');
+        return;
+    }
+
+    let cartItem = { 
+        name: productName, 
+        price: parseFloat(productPrice),  // Asegurarse de que el precio sea un número
+        image: imagePath, 
+        quantity: 1, 
+        lastPrice: parseFloat(productPrice),  // Asegurarse de que el precio sea un número
+        stock: stock - 1
+    };
+    cart.push(cartItem);
+  
+    updateStock(productName, cartItem.stock);
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function updateStock(productID, newStock) {
+    let stockElement = document.getElementById(productID);
+    if (stockElement) {
+        stockElement.textContent = newStock;
+    } else {
+        console.error(`No se encontró ningún elemento con el ID ${productID}`);
     }
 }

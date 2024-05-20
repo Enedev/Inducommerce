@@ -18,7 +18,7 @@
           <img id="navbar-image" src="img/Logo.png">
       </a>
       <div class="menu">
-          <a href="cataloge.html" class="menu-item">Productos</a>
+          <a href="cataloge.html" class="menu-item">Catalogo</a>
           <a href="aboutUs.html" class="menu-item">Contacto</a>
           <a href="shoppingCart.html" id="cart_icon">
             <i class="fas fa-shopping-cart"></i>
@@ -35,6 +35,8 @@
           </a>
       </div>
     </nav>
+    <h1 id="titulo-carrito">CARRITO DE COMPRAS</h1>
+
     <div id="cart-items-container">
       <!-- Aquí se mostrarán los productos del carrito -->
       <div id="cart-items"></div>
@@ -46,10 +48,27 @@
       <!-- Total -->
       <span id="total-price">0</span>
     </div>
-    <script src="js/CargarCarrito.js"></script>
-    <script src="js/menuToggle.js"></script>
+    <button id="schedule-button">Programar entrega</button>
+    <input type="date" id="delivery-date" class="hidden">
+    <div id="buy-container">
+      <button id="buy-button">Comprar</button>
+    </div>
+    <div id="popup" class="popup hidden">
+      <div class="popup-content">
+          <span class="close-popup">&times;</span>
+          <p>Gracias por tu compra. Se te envió  una notificación.</p>
+      </div>
+    </div>
+  
     <footer>
       &copy; 2024 Induck'Service. Todos los derechos reservados.
     </footer>
+    
+    <script src="js/CargarCarrito.js"></script>
+    <script src="js/menuToggle.js"></script>
+    <script src="js/stock.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/date.js"></script>
+
   </body>
 </html>

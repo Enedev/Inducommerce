@@ -21,11 +21,13 @@
             <img id="navbar-image" src="img/Logo.png">
         </a>
         <div class="menu">
-            <a href="cataloge.html" class="menu-item">Productos</a>
+            <a href="cataloge.html" class="menu-item">Catalogo</a>
             <a href="aboutUs.html" class="menu-item">Contacto</a>
             <a href="shoppingCart.html" id="cart_icon">
               <i class="fas fa-shopping-cart"></i>
             </a>
+            <button id="admin-mode-button" class="menu-item">Modo administrador</button>
+
         </div>
         <div id="search">
             <input id="search-input" type="text" placeholder="Buscar...">
@@ -38,188 +40,235 @@
             </a>
         </div>
     </nav>
-    <div class="title">
-        <h2>Nuestros productos</h2>
+    <div class="wrapper">
+        <aside class="filtrar">
+            <h2>Filtrar</h2>
+            <div>
+                <h3>Categorías</h3>
+                <label class="checkbox-container">Todas las Categorías
+                    <input type="checkbox" name="category-filter" value="all" checked>
+                    <span class="checkmark"></span>
+                </label><br>
+                <label class="checkbox-container">Estufas
+                    <input type="checkbox" name="category-filter" value="estufas">
+                    <span class="checkmark"></span>
+                </label><br>
+                <label class="checkbox-container">Congeladores
+                    <input type="checkbox" name="category-filter" value="congeladores">
+                    <span class="checkmark"></span>
+                </label><br>
+                <label class="checkbox-container">Freidores
+                    <input type="checkbox" name="category-filter" value="freidores">
+                    <span class="checkmark"></span>
+                </label><br>
+            </div>
+            <div>
+                <h3>Precios</h3>
+                <label class="checkbox-container">Todos los Precios
+                    <input type="checkbox" name="price-filter" value="all" checked>
+                    <span class="checkmark"></span>
+                </label><br>
+                <label class="checkbox-container">$0 - $50
+                    <input type="checkbox" name="price-filter" value="0-50">
+                    <span class="checkmark"></span>
+                </label><br>
+                <label class="checkbox-container">$51 - $100
+                    <input type="checkbox" name="price-filter" value="51-100">
+                    <span class="checkmark"></span>
+                </label><br>
+            </div>
+        </aside>
+        <div class="main-content">
+            <div class="title">
+                <h2>Nuestros productos</h2>
+            </div>
+            <main>
+                <div class="product" id="product1" data-category="congeladores" data-stock="10">
+                    <img src="img/refrigerator1.jpeg" alt="Producto 1">
+                    <h2>Congelador Vertical 2 Puertas Solidas</h2>
+                    <p>Descripción del Producto 1.</p>
+                    <p>Precio: $</p><p class="prices" id="price1">100</p>
+                    <p>Stock: </p><p class="stock" id="stock1">10</p>
+                    <ul class="stars" id="stars1">
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                    </ul>
+                    <button class="add-to-cart" onclick="addToCart('Congelador Vertical 2 Puertas Solidas','100','img/refrigerator1.jpeg', 10)">
+                        <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
+                    </button>
+                    <div class="more-info">
+                        <img src="img/refrigerator1.jpeg" alt="Producto 1">
+                        <h2>Congelador Vertical 2 Puertas Solidas</h2>
+                        <p>Descripción más detallada del Producto 1.</p>
+                        <p>Precio: $</p><p class="prices" id="price1">100</p>
+                        <p>Stock: </p><p class="stock" id="stock1">10</p>
+
+                        <button class="add-to-cart" onclick="addToCart('Congelador Vertical 2 Puertas Solidas','100','img/refrigerator1.jpeg', 10)">Añadir al carrito <i class="fas fa-cart-plus"></i></button>
+                        <div class="comments">
+                            <h3>Comentarios:</h3>
+                            <div class="user-comment">
+                                <span class="user">Usuario 1:</span>
+                                <span class="comment">Comentario del usuario 1.</span>
+                            </div> <!-- Puedes añadir más comentarios aquí -->
+                        </div>
+                        <button class="add-comment">Agregar comentario</button>
+                    </div>
+                </div>
+        
+                <div class="product" id="product2" data-category="congeladores" data-stock="13">
+                    <img src="img/refrigerator2.jpeg" alt="Producto 2">
+                    <h2>Congelador Vertical Puerta Solida</h2>
+                    <p>Descripción del Producto 2.</p>
+                    <p>Precio: $</p><p class="prices" id="price2">80</p>
+                    <p>Stock: </p><p class="stock" id="stock2">13</p>
+                    <ul class="stars" id="stars2">
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                    </ul>
+                    <button class="add-to-cart" onclick="addToCart('Congelador Vertical Puerta Solida','80','img/refrigerator2.jpeg', 13)">
+                        <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
+                    </button>
+                    <div class="more-info">
+                        <img src="img/refrigerator2.jpeg" alt="Producto 2">
+                        <h2>Congelador Vertical Puerta Solida</h2>
+                        <p>Descripción más detallada del Producto 2.</p>
+                        <p>Precio: $</p><p class="prices" id="price2">80</p>
+                        <p>Stock: </p><p class="stock" id="stock2">13</p>
+                        <button class="add-to-cart" onclick="addToCart('Congelador Vertical Puerta Solida','80','img/refrigerator2.jpeg', 13)">Añadir al carrito
+                        <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
+                    </button>
+                        <div class="comments">
+                            <h3>Comentarios:</h3>
+                            <div class="user-comment">
+                                <span class="user">Usuario 1:</span>
+                                <span class="comment">Comentario del usuario 1.</span>
+                            </div>
+                            <!-- Puedes añadir más comentarios aquí -->
+                        </div>
+                        <button class="add-comment">Agregar comentario</button>
+                    </div>
+                </div>
+        
+                <div class="product" id="product3" data-category="estufas" data-stock="17">
+                    <img src="img/cooker1.jpeg" alt="Producto 3">
+                    <h2>Estufa Industrial De 2 Puestos A Gas</h2>
+                    <p>Descripción del Producto 3.</p>
+                    <p>Precio: $</p><p class="prices" id="price3">70</p>
+                    <p>Stock: </p><p class="stock" id="stock3">17</p>
+                    <ul class="stars" id="stars3">
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                    </ul>
+                    <button class="add-to-cart" onclick="addToCart('Estufa Industrial De 2 Puestos A Gas','70','img/cooker1.jpeg' , 17)">
+                        <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
+                    </button>
+                    <div class="more-info">
+                        <img src="img/cooker1.jpeg" alt="Producto 3">
+                        <h2>Estufa Industrial De 2 Puestos A Gas</h2>
+                        <p>Descripción más detallada del Producto 3.</p>
+                        <p>Precio: $</p><p class="prices" id="price3">70</p>
+                        <p>Stock: </p><p class="stock" id="stock3">17</p>
+                        <button class="add-to-cart" onclick="addToCart('Estufa Industrial De 2 Puestos A Gas','70','img/cooker1.jpeg' , 17)">Añadir al carrito
+                        <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
+                    </button>
+                        <div class="comments">
+                            <h3>Comentarios:</h3>
+                            <div class="user-comment">
+                                <span class="user">Usuario 1:</span>
+                                <span class="comment">Comentario del usuario 1.</span>
+                            </div>
+                            <!-- Puedes añadir más comentarios aquí -->
+                        </div>
+                        <button class="add-comment">Agregar comentario</button>
+                    </div>
+                </div>
+        
+                <div class="product" id="product4"  data-category="estufas" data-stock="15">
+                    <img src="img/cooker2.jpeg" alt="Producto 4">
+                    <h2>Estufa Industrial De 4 Puestos A Gas</h2>
+                    <p>Descripción del Producto 4.</p>
+                    <p>Precio: $</p><p class="prices" id="price4">95</p>
+                    <p>Stock: </p><p class="stock" id="stock4">15</p>
+                    <ul class="stars" id="stars4">
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                    </ul>
+                    <button class="add-to-cart" onclick="addToCart('Estufa Industrial De 4 Puestos A Gas','95','img/cooker2.jpeg' , 15)">
+                        <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
+                    </button>
+                    <div class="more-info">
+                        <img src="img/cooker2.jpeg" alt="Producto 4">
+                        <h2>Estufa Industrial De 4 Puestos A Gas</h2>
+                        <p>Descripción más detallada del Producto 4.</p>
+                        <p>Precio: $</p><p class="prices" id="price4">95</p>
+                        <p>Stock: </p><p class="stock" id="stock4">15</p>
+                        <button class="add-to-cart" onclick="addToCart('Estufa Industrial De 4 Puestos A Gas','95','img/cooker2.jpeg' , 15)">Añadir al carrito
+                            <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
+                        </button>
+                        <div class="comments">
+                            <h3>Comentarios:</h3>
+                            <div class="user-comment">
+                                <span class="user">Usuario 1:</span>
+                                <span class="comment">Comentario del usuario 1.</span>
+                            </div>
+                            <!-- Puedes añadir más comentarios aquí -->
+                        </div>
+                        <button class="add-comment">Agregar comentario</button>
+                    </div>
+                </div>
+        
+                <div class="product" id="product5"  data-category="freidores" data-stock="12">
+                    <img src="img/fryer.jpeg" alt="Producto 5">
+                    <h2>Freidor 1 Tanque 25 Litros A Gas</h2>
+                    <p>Descripción del Producto 5.</p>
+                    <p>Precio: $</p><p class="prices" id="price1">40</p>
+                    <p>Stock: </p><p class="stock" id="stock5">12</p>
+                    <ul class="stars" id="stars5">
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                        <li class="star">&#9733;</li>
+                    </ul>
+                    <button class="add-to-cart" onclick="addToCart('Freidor 1 Tanque 25 Litros A Gas','40','img/fryer.jpeg' , 12)">
+                        <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
+                    </button>
+                    <div class="more-info">
+                        <img src="img/fryer.jpeg" alt="Producto 5">
+                        <h2>Freidor 1 Tanque 25 Litros A Gas</h2>
+                        <p>Descripción más detallada del Producto 5.</p>
+                        <p>Precio: $</p><p class="prices" id="price5">40</p>
+                        <p>Stock: </p><p class="stock" id="stock5">12</p>
+                        <button class="add-to-cart" onclick="addToCart('Freidor 1 Tanque 25 Litros A Gas','40','img/fryer.jpeg' , 12)">Añadir al carrito
+                            <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
+                        </button>
+                        <div class="comments">
+                            <h3>Comentarios:</h3>
+                            <div class="user-comment">
+                                <span class="user">Usuario 1:</span>
+                                <span class="comment">Comentario del usuario 1.</span>
+                                
+                            </div>
+                            <!-- Puedes añadir más comentarios aquí -->
+                        </div>
+                        <button class="add-comment">Agregar comentario</button>
+                    </div>
+                </div>
+            </main>
+        </div>
     </div>
-    <main>
-        <div class="product" id="product1">
-            <img src="img/refrigerator1.jpeg" alt="Producto 1">
-            <h2>Congelador Vertical 2 Puertas Solidas</h2>
-            <p>Descripción del Producto 1.</p>
-            <p>Precio: $</p><p class="prices" id="price1">3.99</p>
-            <ul class="stars" id="stars1">
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-            </ul>
-            <button class="add-to-cart" onclick="addToCart('Congelador Vertical 2 Puertas Solidas','3.99','img/refrigerator1.jpeg')">
-                <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
-            </button>
-            <div class="more-info">
-                <img src="img/refrigerator1.jpeg" alt="Producto 1">
-                <h2>Congelador Vertical 2 Puertas Solidas</h2>
-                <p>Descripción más detallada del Producto 1.</p>
-                <p>Precio: $</p><p class="prices" id="price1">3.99</p>
-                <button class="add-to-cart" onclick="addToCart('Congelador Vertical 2 Puertas Solidas','3.99','img/refrigerator1.jpeg')"> Añadir al carrito
-                    <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
-                </button>
-                <div class="comments">
-                    <h3>Comentarios:</h3>
-                    <div class="user-comment">
-                        <span class="user">Usuario 1:</span>
-                        <span class="comment">Comentario del usuario 1.</span>
-                        
-                    </div>
-                    <!-- Puedes añadir más comentarios aquí -->
-                </div>
-                <button class="add-comment">Agregar comentario</button>
-            </div>
-        </div>
-
-        <div class="product" id="product2">
-            <img src="img/refrigerator2.jpeg" alt="Producto 2">
-            <h2>Congelador Vertical Puerta Solida</h2>
-            <p>Descripción del Producto 2.</p>
-            <p>Precio: $</p><p class="prices" id="price2">3.99</p>
-            <ul class="stars" id="stars2">
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-            </ul>
-            <button class="add-to-cart" onclick="addToCart('Congelador Vertical Puerta Solida','3.99','img/refrigerator2.jpeg')">
-                <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
-            </button>
-            <div class="more-info">
-                <img src="img/refrigerator2.jpeg" alt="Producto 2">
-                <h2>Congelador Vertical Puerta Solida</h2>
-                <p>Descripción más detallada del Producto 2.</p>
-                <p>Precio: $</p><p class="prices" id="price2">3.99</p>
-                <button class="add-to-cart" onclick="addToCart('Congelador Vertical Puerta Solida','3.99','img/refrigerator2.jpeg')">Añadir al carrito
-                <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
-            </button>
-                <div class="comments">
-                    <h3>Comentarios:</h3>
-                    <div class="user-comment">
-                        <span class="user">Usuario 1:</span>
-                        <span class="comment">Comentario del usuario 1.</span>
-                    </div>
-                    <!-- Puedes añadir más comentarios aquí -->
-                </div>
-                <button class="add-comment">Agregar comentario</button>
-            </div>
-        </div>
-
-        <div class="product" id="product3">
-            <img src="img/cooker1.jpeg" alt="Producto 3">
-            <h2>Estufa Industrial De 2 Puestos A Gas</h2>
-            <p>Descripción del Producto 3.</p>
-            <p>Precio: $</p><p class="prices" id="price3">3.99</p>
-            <ul class="stars" id="stars3">
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-            </ul>
-            <button class="add-to-cart" onclick="addToCart('Estufa Industrial De 2 Puestos A Gas','3.99','img/cooker1.jpeg')">
-                <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
-            </button>
-            <div class="more-info">
-                <img src="img/cooker1.jpeg" alt="Producto 3">
-                <h2>Estufa Industrial De 2 Puestos A Gas</h2>
-                <p>Descripción más detallada del Producto 3.</p>
-                <p>Precio: $</p><p class="prices" id="price3">3.99</p>
-                <button class="add-to-cart" onclick="addToCart('Estufa Industrial De 2 Puestos A Gas','3.99','img/cooker1.jpeg')">Añadir al carrito
-                <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
-            </button>
-                <div class="comments">
-                    <h3>Comentarios:</h3>
-                    <div class="user-comment">
-                        <span class="user">Usuario 1:</span>
-                        <span class="comment">Comentario del usuario 1.</span>
-                    </div>
-                    <!-- Puedes añadir más comentarios aquí -->
-                </div>
-                <button class="add-comment">Agregar comentario</button>
-            </div>
-        </div>
-
-        <div class="product" id="product4">
-            <img src="img/cooker2.jpeg" alt="Producto 4">
-            <h2>Estufa Industrial De 4 Puestos A Gas</h2>
-            <p>Descripción del Producto 4.</p>
-            <p>Precio: $</p><p class="prices" id="price4">3.99</p>
-            <ul class="stars" id="stars4">
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-            </ul>
-            <button class="add-to-cart" onclick="addToCart('Estufa Industrial De 4 Puestos A Gas','3.99','img/cooker2.jpeg')">
-                <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
-            </button>
-            <div class="more-info">
-                <img src="img/cooker2.jpeg" alt="Producto 4">
-                <h2>Estufa Industrial De 4 Puestos A Gas</h2>
-                <p>Descripción más detallada del Producto 4.</p>
-                <p>Precio: $</p><p class="prices" id="price4">3.99</p>
-                <button class="add-to-cart" onclick="addToCart('Estufa Industrial De 4 Puestos A Gas','3.99','img/cooker2.jpeg')">Añadir al carrito
-                    <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
-                </button>
-                <div class="comments">
-                    <h3>Comentarios:</h3>
-                    <div class="user-comment">
-                        <span class="user">Usuario 1:</span>
-                        <span class="comment">Comentario del usuario 1.</span>
-                    </div>
-                    <!-- Puedes añadir más comentarios aquí -->
-                </div>
-                <button class="add-comment">Agregar comentario</button>
-            </div>
-        </div>
-
-        <div class="product" id="product5">
-            <img src="img/fryer.jpeg" alt="Producto 5">
-            <h2>Freidor 1 Tanque 25 Litros A Gas</h2>
-            <p>Descripción del Producto 5.</p>
-            <p>Precio: $</p><p class="prices" id="price1">3.99</p>
-            <ul class="stars" id="stars5">
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-                <li class="star">&#9733;</li>
-            </ul>
-            <button class="add-to-cart" onclick="addToCart('Freidor 1 Tanque 25 Litros A Gas','3.99','img/fryer.jpeg')">
-                <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
-            </button>
-            <div class="more-info">
-                <img src="img/fryer.jpeg" alt="Producto 5">
-                <h2>Freidor 1 Tanque 25 Litros A Gas</h2>
-                <p>Descripción más detallada del Producto 5.</p>
-                <p>Precio: $</p><p class="prices" id="price5">3.99</p>
-                <button class="add-to-cart" onclick="addToCart('Freidor 1 Tanque 25 Litros A Gas','3.99','img/fryer.jpeg')">Añadir al carrito
-                    <i class="fas fa-cart-plus"></i> <!-- Icono de carrito con signo más -->
-                </button>
-                <div class="comments">
-                    <h3>Comentarios:</h3>
-                    <div class="user-comment">
-                        <span class="user">Usuario 1:</span>
-                        <span class="comment">Comentario del usuario 1.</span>
-                        
-                    </div>
-                    <!-- Puedes añadir más comentarios aquí -->
-                </div>
-                <button class="add-comment">Agregar comentario</button>
-            </div>
-        </div>
-    </main>
-
     <!-- No tocar mana de tontos -->
     
     <div id="commentModal" class="modal">
@@ -231,6 +280,16 @@
             <button id="submitComment">Aceptar</button>
         </div>
     </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <input type="number" id="modal-input" placeholder="Nuevo valor">
+            <button id="modal-submit">Guardar cambios</button>
+        </div>
+    </div>
+
     <footer>
         &copy; 2024 Induck'Service. Todos los derechos reservados.
     </footer>
@@ -243,6 +302,8 @@
     <script src="js/carrito.js"></script>
     <script src="js/CargarCarrito.js"></script>
     <script src="js/menuToggle.js"></script>
-
+    <script src="js/stock.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/admin.js"></script>
 </body>
 </html>

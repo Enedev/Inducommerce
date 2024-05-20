@@ -48,7 +48,7 @@ main {
 }
 
 .product h2 {
-    margin-top: 10px;
+    margin-top: 0px;
     font-size: 1.5em; /* Tamaño de fuente más grande */
 }
 
@@ -128,3 +128,170 @@ main {
 
 
 
+.filtrar h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.filtrar {
+    width: 20%; /* Ajusta el ancho del aside según sea necesario */
+    padding: 20px;
+    background-color: #f2f2f2; /* Color de fondo del aside */
+    border-right: 2px solid #ccc; /* Borde solo en el lado derecho */
+}
+
+.main-content {
+    width: 90%; /* Reducir el ancho del contenido principal */
+    padding-left: 35px;
+    
+}
+
+.title {
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filtrar h3 {
+    color: #000;
+}
+
+.checkbox-container {
+    margin-top: 10px;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    user-select: none;
+    color: #000;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #000;
+    border: 2px solid #000;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+#admin-mode-button {
+    background-color: red;
+    color: black;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#admin-mode-button:hover {
+    background-color: #ba1414;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+.edit-price-button,
+.add-discount-button {
+    background-color: white;
+    border: 2px solid red;
+    margin-top: 10px;
+    color: black;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-price-button:hover,
+.add-discount-button:hover {
+    background-color: #ba1414;
+}
