@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (product && product.stock>0) {
                     product.quantity++;
                     product.stock--;
+                    updateStock(product.ID, product.stock)
                     let totalPrice = (product.price * product.quantity).toFixed(2);
                     this.parentNode.querySelector('.item-price').textContent = '$' + totalPrice;
                     this.parentNode.querySelector('.item-und span').textContent = product.quantity;
@@ -97,11 +98,17 @@ function hideBuyButton() {
     document.getElementById('buy-button').style.display = "none";
 }
 
-function updateStock(productName, newStock) {
-    let stockElement = document.getElementById('stock-' + productName);
-    if (stockElement) {
-        stockElement.textContent = newStock;
+function updateStock(productID, newStock) {
+
+    // esto es porque hay varios cosos donde se muestra el stock de un producto 
+    let stockElements = document.querySelectorAll(`.stock${productID}`);
+    
+    if (stockElements.length > 0) {
+        stockElements.forEach(element => {
+            element.textContent = newStock;
+            console.log(`el Stock ahora es: ${newStock}`);
+        });
     } else {
-        console.error(`No se encontró ningún elemento con el ID ${productName}`);
+        console.error(`No se encontró ningún elemento con la clase stock${productID}`);
     }
 }

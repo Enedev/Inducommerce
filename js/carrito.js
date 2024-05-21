@@ -1,18 +1,19 @@
-function addToCart(productName, productPrice, imagePath, stock) {
+function addToCart(productID, productName, productPrice, imagePath, stock) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  
+
     let existingItem = cart.find(item => item.name === productName);
     if (existingItem) {
       alert('El producto ya está en el carrito.');
       return;
     }
-  
+
     if (stock <= 0) {
       alert('El producto está fuera de stock.');
       return;
     }
   
-    let cartItem = { 
+    let cartItem = {
+      ID : productID,
       name: productName, 
       price: parseFloat(productPrice),  // Asegurarse de que el precio sea un número
       image: imagePath, 
@@ -22,18 +23,24 @@ function addToCart(productName, productPrice, imagePath, stock) {
     };
     cart.push(cartItem);
   
-    updateStock(productName, cartItem.stock);
+    updateStock(cartItem.ID, cartItem.stock);
     localStorage.setItem("cart", JSON.stringify(cart));
   }
   
-  function updateStock(productID, newStock) {
-    let stockElement = document.getElementById(productID);
-    if (stockElement) {
-      stockElement.textContent = newStock;
+function updateStock(productID, newStock) {
+
+    // esto es porque hay varios cosos donde se muestra el stock de un producto 
+    let stockElements = document.querySelectorAll(`.stock${productID}`);
+    
+    if (stockElements.length > 0) {
+        stockElements.forEach(element => {
+            element.textContent = newStock;
+            console.log(`el Stock ahora es: ${newStock}`);
+        });
     } else {
-      console.error(`No se encontró ningún elemento con el ID ${productID}`);
+        console.error(`No se encontró ningún elemento con la clase stock${productID}`);
     }
-  }
+}
   
   // New function to store past purchases
   function storePastPurchase(cart, total, status) {
@@ -58,7 +65,6 @@ function addToCart(productName, productPrice, imagePath, stock) {
       alert('El carrito está vacío.');
       return;
     }
-  
     let total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     let products = cart.map(item => item.name).join(', ');
   

@@ -21,11 +21,20 @@ nav {
 }
 
 #navbar-image {
-    width: 50px;  /* Cambia esto al ancho que desees */
-    height: 50px; /* Cambia esto al alto que desees */
+    width: 60px;  /* Cambia esto al ancho que desees */
+    height: 60px; /* Cambia esto al alto que desees */
     margin: -7px 0px; /* Ajusta el valor de 'margin-right' a 10px */
     
 }
+#navbar-title {
+    color: white; /* Cambia el color del texto si lo deseas */
+    margin-left: 5px; /* Añade un margen a la izquierda para separar el título del logo */
+    position: relative; /* Añade posición relativa para mover el título */
+    bottom: 10px; /* Ajusta este valor para mover el título hacia arriba */
+    font-size: 28px;
+    font-weight: bold;
+}
+
 #conteinerLogo{
     margin-left: 40px;
 }
@@ -97,6 +106,7 @@ a {
     cursor: pointer;
     position: absolute; /* Añade posición absoluta */
     left: 20px; /* Ajusta la posición a la izquierda */
+    margin-top: 10px;
 }
 
 .menu-toggle i {
@@ -141,6 +151,7 @@ a {
 #page-title {
     position: absolute;
     right: 80px;
+    margin-top: 10px
 }
 
 footer {
