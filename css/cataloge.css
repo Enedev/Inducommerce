@@ -302,26 +302,29 @@ main {
     width: 23%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     
 }
 .packages-images{
     margin-top: 10px;
     text-align: center;
     display: flex;
+    flex-direction: column;
     border: 2px solid gray;
     width: 100%; /* Ajustar el ancho de la imagen al 100% del contenedor */
     height: auto;
+    overflow: hidden;
     border-radius: 5px;
 }
 
 .packages-images img{
     text-align: center;
-    width: 100%; /* Ajustar el ancho de la imagen al 100% del contenedor */
+    width: 100%;/* Ajustar el ancho de la imagen al 100% del contenedor */
     height: auto;
     border-radius: 5px;
 }
 
 .packages-images:hover{
-    transform: scale(1.2); 
+    transform: scale(1.1); 
 }
   
