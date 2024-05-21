@@ -74,3 +74,20 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initial filtering (show all products by default)
     filterProducts();
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleccionar el botón y agregarle un evento de clic
+    const clearFiltersButton = document.getElementById('clear-filters-button');
+    clearFiltersButton.addEventListener('click', clearFilters);
+
+    // Función para desactivar todos los checkboxes
+    function clearFilters() {
+        // Seleccionar todos los checkboxes
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        // Desmarcar todos los checkboxes
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = false;
+        });
+    }
+});

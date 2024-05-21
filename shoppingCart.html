@@ -7,68 +7,88 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/shoppingCart.css">
-
+    <link rel="stylesheet" href="css/cataloge.css">
 </head>
-  <body>
+<body>
     <nav>
-      <div class="menu-toggle" onclick="toggleMenu()">
-          <i class="fas fa-bars"></i>
-      </div>
-      <a href="index.html" id = "conteinerLogo">
-          <img id="navbar-image" src="img/Logo.png">
-      </a>
-      <div class="menu">
-          <a href="cataloge.html" class="menu-item">Catalogo</a>
-          <a href="aboutUs.html" class="menu-item">Contacto</a>
-          <a href="shoppingCart.html" id="cart_icon">
-            <i class="fas fa-shopping-cart"></i>
-          </a>
-      </div>
-      <div id="search">
-          <input id="search-input" type="text" placeholder="Buscar...">
-          <button><i class="fa-solid fa-magnifying-glass"></i></button>
-      </div>
-      <div id="page-title"></div>
-      <div class="cart-icon">
-          <a href="shoppingCart.html" id="cart_icon">
-              <i class="fas fa-shopping-cart"></i>
-          </a>
-      </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <a href="index.html" id="conteinerLogo">
+            <img id="navbar-image" src="img/Logo.png">
+        </a>
+        <div class="menu">
+            <a href="cataloge.html" class="menu-item">Catalogo</a>
+            <a href="aboutUs.html" class="menu-item">Contacto</a>
+            <a href="shoppingCart.html" id="cart_icon">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <button id="admin-mode-button" class="menu-item">Modo administrador</button>
+        </div>
+        <div id="search">
+            <input id="search-input" type="text" placeholder="Buscar...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div id="page-title"></div>
+        <div class="cart-icon">
+            <a href="shoppingCart.html" id="cart_icon">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
     </nav>
     <h1 id="titulo-carrito">CARRITO DE COMPRAS</h1>
 
     <div id="cart-items-container">
-      <!-- Aquí se mostrarán los productos del carrito -->
-      <div id="cart-items"></div>
+        <!-- Aquí se mostrarán los productos del carrito -->
+        <div id="cart-items"></div>
     </div>
     <!-- Contenedor del total -->
     <div id="total-container">
-      <!-- Texto "Total: $" -->
-      <span id="total-label">Total: $</span>
-      <!-- Total -->
-      <span id="total-price">0</span>
+        <!-- Texto "Total: $" -->
+        <span id="total-label">Total: $</span>
+        <!-- Total -->
+        <span id="total-price">0</span>
     </div>
     <button id="schedule-button">Programar entrega</button>
     <input type="date" id="delivery-date" class="hidden">
     <div id="buy-container">
-      <button id="buy-button">Comprar</button>
+        <button id="buy-button">Comprar</button>
     </div>
     <div id="popup" class="popup hidden">
-      <div class="popup-content">
-          <span class="close-popup">&times;</span>
-          <p>Gracias por tu compra. Se te envió  una notificación.</p>
-      </div>
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <p>Gracias por tu compra. Se te envió una notificación.</p>
+        </div>
+    </div>
+    
+    <div id="admin-panel" class="admin-panel">
+      <h2>Compras Realizadas</h2>
+      <table id="purchases-table" class="minimalist-table">
+          <thead>
+              <tr>
+                  <th>Productos</th>
+                  <th>Total</th>
+                  <th>Estado</th>
+                  <th id="admin-odioapol" class="hidden">Cambiar</th>
+              </tr>
+          </thead>
+          <tbody id="past-purchases">
+          </tbody>
+      </table>
     </div>
   
+
     <footer>
-      &copy; 2024 Induck'Service. Todos los derechos reservados.
+        &copy; 2024 Induck'Service. Todos los derechos reservados.
     </footer>
-    
+
     <script src="js/CargarCarrito.js"></script>
     <script src="js/menuToggle.js"></script>
     <script src="js/stock.js"></script>
     <script src="js/notification.js"></script>
     <script src="js/date.js"></script>
-
-  </body>
+    <script src="js/admin.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/purchaseManager.js"></script>
+</body>
 </html>

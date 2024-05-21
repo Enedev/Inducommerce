@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/catalogeShoppingCart.css">
     <link rel="stylesheet" href="css/starsProduct.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/productsBoxes.css">
     <link rel="stylesheet" href="css/commentModalInput.css">
     <link rel="icon" href="img/Logo.png" type="image/png">
 </head>
@@ -77,8 +78,37 @@
                     <span class="checkmark"></span>
                 </label><br>
             </div>
+            <button id="clear-filters-button" class="package-button">Desactivar todos los filtros</button>
         </aside>
         <div class="main-content">
+            <div class="packages">
+                <h2>Paquetes</h2>
+                <div class="package-buttons">
+                    <div class="packages-byside">
+                        <button class="package-button" data-category="congelador">Paquete de Congeladores</button>
+                        <div class="packages-images">
+                            <img src="img/refrigerator1.jpeg" alt="congelador">
+                            <img src="img/refrigerator2.jpeg" alt="congelador">
+                        </div>
+                    </div>
+                    <div class="packages-byside">
+                        <button class="package-button" data-category="freidor">Paquete de Freidoras</button>
+                        <div class="packages-images">
+                            <img src="img/fryer.jpeg" alt="freidor">
+                        </div>
+                    </div>
+                    <div class="packages-byside">
+                        <button class="package-button" data-category="estufa">Paquete de Estufas</button>
+                        <div class="packages-images">
+                            <img src="img/cooker1.jpeg" alt="estufa">
+                            <img src="img/cooker2.jpeg" alt="estufa">
+
+                        </div>
+                    </div>
+
+                    <!-- Agrega más botones según tus categorías de productos -->
+                </div>
+            </div>
             <div class="title">
                 <h2>Nuestros productos</h2>
             </div>
@@ -115,6 +145,8 @@
                             </div> <!-- Puedes añadir más comentarios aquí -->
                         </div>
                         <button class="add-comment">Agregar comentario</button>
+                        <h3>Otros productos:</h3>
+                        <div id="other-products"></div>
                     </div>
                 </div>
         
@@ -152,6 +184,8 @@
                             <!-- Puedes añadir más comentarios aquí -->
                         </div>
                         <button class="add-comment">Agregar comentario</button>
+                        <h3>Otros productos:</h3>
+                        <div id="other-products"></div>
                     </div>
                 </div>
         
@@ -189,6 +223,8 @@
                             <!-- Puedes añadir más comentarios aquí -->
                         </div>
                         <button class="add-comment">Agregar comentario</button>
+                        <h3>Otros productos:</h3>
+                        <div id="other-products"></div>
                     </div>
                 </div>
         
@@ -226,6 +262,8 @@
                             <!-- Puedes añadir más comentarios aquí -->
                         </div>
                         <button class="add-comment">Agregar comentario</button>
+                        <h3>Otros productos:</h3>
+                        <div id="other-products"></div>
                     </div>
                 </div>
         
@@ -264,11 +302,14 @@
                             <!-- Puedes añadir más comentarios aquí -->
                         </div>
                         <button class="add-comment">Agregar comentario</button>
+                        <h3>Otros productos:</h3>
+                        <div id="other-products"></div>
                     </div>
                 </div>
             </main>
         </div>
     </div>
+
     <!-- No tocar mana de tontos -->
     
     <div id="commentModal" class="modal">
@@ -305,5 +346,7 @@
     <script src="js/stock.js"></script>
     <script src="js/filter.js"></script>
     <script src="js/admin.js"></script>
+    <script src="js/addsMoreInfo.js"></script>
+    <script src="js/productsBoxes.js"></script>
 </body>
 </html>

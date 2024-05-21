@@ -1,0 +1,28 @@
+.packages h2 {
+    text-align: center;
+    font-size: 2em;
+    margin: 0;
+    padding: 10px 0;
+    color: #666; /* Color de texto más gris */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.package-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.package-button {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 2px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.package-button:hover {
+    background-color: #e0e0e0;
+}

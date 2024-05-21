@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let products = document.querySelectorAll('.product');
     let isAdminMode = false; // Variable para controlar el estado del modo administrador
 
+    
     adminModeButton.addEventListener("click", function() {
         if (!isAdminMode) { // Verificar si el modo administrador ya está activado
             isAdminMode = true; // Activar el modo administrador
@@ -75,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-
     // Function to display modal
     function showModal(product, title, callback) {
         let modal = document.getElementById("myModal");
@@ -133,7 +133,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-
 
 function closeModal() {
     let modal = document.getElementById("myModal");
