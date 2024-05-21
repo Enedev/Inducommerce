@@ -17,3 +17,12 @@ function getPageTitle() {
 
 // Llamar a la función cuando se cargue la página
 window.onload = getPageTitle;
+
+
+document.getElementById('supportBtn').addEventListener('click', function() {
+    var alert = document.getElementById('supportAlert');
+    alert.style.display = 'block';
+    setTimeout(function() {
+        alert.style.display = 'none';
+    }, 3000); // La alerta se oculta después de 3 segundos
+});
