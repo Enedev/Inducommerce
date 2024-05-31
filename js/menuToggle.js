@@ -2,7 +2,6 @@ function toggleMenu() {
     var menu = document.querySelector('.menu');
     menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
 }
-
 // Función para obtener el título de la página actual
 function getPageTitle() {
     // Obtener el título de la página actual
@@ -17,7 +16,6 @@ function getPageTitle() {
 
 // Llamar a la función cuando se cargue la página
 window.onload = getPageTitle;
-
 
 document.getElementById('supportBtn').addEventListener('click', function() {
     var alert = document.getElementById('supportAlert');

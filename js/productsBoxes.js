@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const packageButtons = document.querySelectorAll('.package-button');
     const products = document.querySelectorAll('.product');
@@ -8,11 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
         products.forEach(product => {
             const productCategory = product.dataset.category.toLowerCase();
             if (productCategory.includes(category)) {
+                const productID = product.id.replace('product', ''); // Extrae el número del ID del producto
                 const productName = product.querySelector('h2').textContent;
                 const productPrice = product.querySelector('.prices').textContent;
                 const productImage = product.querySelector('img').src;
                 const productStock = parseInt(product.querySelector('.stock').textContent);
-                addToCart(productName, productPrice, productImage, productStock);
+                addToCart(productID, productName, productPrice, productImage, productStock);
             }
         });
     }
