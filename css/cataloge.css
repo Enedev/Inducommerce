@@ -328,3 +328,7 @@ main {
     transform: scale(1.1); 
 }
   
+.package-buttons .package-button {
+    font-size: 21px; /* Ajusta este valor según el tamaño que desees */
+    font-weight: bold;
+}
